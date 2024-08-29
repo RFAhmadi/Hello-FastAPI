@@ -2,7 +2,7 @@ import requests
 from config_weather import API_KEY
 
 
-def api_get_weather(city):
+async def api_get_weather(city):
     """
     this function returns the weather information for the given city
     """
