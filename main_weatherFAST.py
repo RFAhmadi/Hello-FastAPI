@@ -1,3 +1,4 @@
+# THANKS TO https://youtu.be/J5Z7rhrSVgc?si=Stwg38_ge9FL8Z7D
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
 from models import Weather
