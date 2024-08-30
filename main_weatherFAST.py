@@ -13,14 +13,13 @@ async def index():
 
 
 @app.get("/weather/")
-async def get_weather(city: str = None):
+async def get_weather(city: str = None, is_json: bool = False):
     response = await api_get_weather(city)
     weather = Weather(**response)
-    # return {
-    #     "weather": weather
-    #     # "weather": {
-    #     #     "city": city
-    #     # }
-    # }
+
+    if is_json:
+        return{
+            "weather": weather
+        }
 
     return HTMLResponse(content=f"<h1>Weather for {weather.location.name}/{weather.location.country}<br/></h1><h2>temperature is {weather.current.temp_c} Celsius</h2> ")
