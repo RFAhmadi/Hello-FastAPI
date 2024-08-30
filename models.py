@@ -51,6 +51,6 @@ class Current(BaseModel):
 
 
 class Weather(BaseModel):
-    location: str
+    location: Location
     current: Current
         
